@@ -1,8 +1,8 @@
 const bodyParser = require('body-parser');
 const cors = require('cors');
 
-const routes = require('@app/routes');
-const config = require('@app/config');
+const routes = require('../routes/index');
+const config = require('../config/index');
 
 // adapted from: https://github.com/santiq/bulletproof-nodejs/blob/master/src/loaders/express.ts
 

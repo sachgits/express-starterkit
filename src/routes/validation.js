@@ -7,7 +7,7 @@ const UserService = require('@app/services/users');
 const route = Router();
 
 module.exports = async function(routes) {
-  routes.use('/users', route);
+  routes.use('/validation', route);
 
   route.get(
     '/',

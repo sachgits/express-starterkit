@@ -5,7 +5,8 @@
   "main": "src/app.js",
   "scripts": {
     "test": "jest --verbose",
-    "start": "nodemon",
+    "devrun": "nodemon",
+    "start": "node ./src/server.js",
     "preinstall": "node ./delete-symlink.js",
     "postinstall": "node ./create-symlink.js",
     "i": "node ./install-wrapper.js install",
@@ -28,6 +29,9 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "express-async-handler": "^1.1.4",
-    "winston": "^3.2.1"
+    "winston": "^3.2.1",
+    "axios": "0.21.1",
+    "request": "^2.51.0",
+    "ssl-root-cas": "^1.1.10"
   }
 }
