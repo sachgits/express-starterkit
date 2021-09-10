@@ -3,7 +3,6 @@ const axios = require('axios').default;
 // This dependency allows us to avoid the UnhandledPromiseRejectionWarning
 const asyncHandler = require('express-async-handler');
 const Logger = require('../loaders/logger');
-const UserService = require('@app/services/users');
 
 const route = Router();
 
@@ -12,10 +11,9 @@ module.exports = async function(routes) {
 
   route.get(
     '/',
-    // eslint-disable-next-line no-unused-vars
+     // eslint-disable-next-line no-unused-vars
     asyncHandler(async (req, res, next) => {
       const filters = req.query;
-      const users = await UserService.find(filters);
       res.status(200).json(users);
     })
   );
